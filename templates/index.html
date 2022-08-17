@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block title %}ホームページ{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <a data-toggle="collapse"
+  href="#form"
+  role="button"
+  aria-expand="false"
+  aria-controls="form">絞り込み</a>
+<div class="collapse" id="form">
+  <form action="/" method="POST">
+    <p>
+      <input type="date" name="date_from">~
+      <input type="date" name="date_to">
+      <select name="team">
+          <option value="">チーム名</option>
+          {% for team in uniq["team"] %}
+            <option value="{{ team }}">{{ team }}</option>
+          {% endfor %}
+      </select>
+      <select name="where">
+          <option value="">場所</option>
+          {% for where in uniq["where"] %}
+            <option value="{{ where }}">{{ where }}</option>
+          {% endfor %}
+      </select>
+      <select name="type">
+        <option value="">種類</option>
+        {% for msg_type in uniq["type"] %}
+        <option value="{{ msg_type }}">{{ msg_type }}</option>
+        {% endfor %}
+      </select>
+      <select name="sort">
+          <option value="decending">日付降順</option>
+          <option value="ascending">日付昇順</option>
+      </select>
+      
+      <input type="submit" class="btn btn-secondary" value="更新">
+    </p>
+  
+  </form>
+</div>
+  
+
+</div>
+<div class="container">
+		<!--Log Viewer-->
+		<div id="log" class="tab-pane p-3">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th scope="col">Date</th>
+						<th scope="col">Team</th>
+						<th scope="col">Type</th>
+						<th scope="col">Where</th>
+						<th scope="col">Message</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for row in log %}
+					<tr>
+						<td class="text-left">{{row.date}}</td>
+						<td class="text-left">{{row.team}}</td>
+						<td class="text-left">{{row.type}}</td>
+						<td class="text-left">{{row.where}}</td>
+						<td class="text-left">{{row.msg}}</td>
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+  </div>
+{% endblock %}

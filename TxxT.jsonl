@@ -1,0 +1,24 @@
+{"date": "20220814_192201", "team": "T02T", "where": "start_pred", "type": "Info", "msg": "successfully mounted GCS."}
+{"date": "20220814_192202", "team": "T02T", "where": "start_pred", "type": "Info", "msg": "Successfull found a script to run."}
+{"date": "20220814_192205", "team": "T02T", "where": "start_pred", "type": "Info", "msg": "successfully finished prediction."}
+{"date": "20220815_192451", "team": "T02T", "where": "start_pred", "type": "Log", "msg": "successfully mounted GCS."}
+{"date": "20220815_192451", "team": "T02T", "where": "start_pred", "type": "Info", "msg": "Successfull found a script to run."}
+{"date": "20220815_192454", "team": "T02T", "where": "run_pred", "type": "Error", "msg": "successfully finished prediction."}
+{"date": "20220815_192757", "team": "T02T", "where": "run_pred", "type": "Error", "msg": "successfully mounted GCS."}
+{"date": "20220817_192758", "team": "T02T", "where": "run_pred", "type": "Error", "msg": "Successfull found a script to run."}
+{"date": "20220817_192802", "team": "T02T", "where": "run_pred", "type": "Error", "msg": "successfully finished prediction."}
+{"date": "20220817_192955", "team": "T02T", "where": "run_pred", "type": "Error", "msg": "successfully mounted GCS."}
+{"date": "20220817_192956", "team": "T02T", "where": "run_pred", "type": "Error", "msg": "Successfull found a script Errorun."}
+{"date": "20220817_192959", "team": "T02T", "where": "run_pred", "type": "Info", "msg": "successfully finished prediction."}
+{"date": "20220817_192201", "team": "T02T", "where": "run_pred", "type": "Info", "msg": "successfully mounted GCS."}
+{"date": "20220814_093202", "team": "T01T", "where": "start_pred", "type": "Info", "msg": "Successfull found a script to run."}
+{"date": "20220814_093205", "team": "T01T", "where": "start_pred", "type": "Info", "msg": "successfully finished prediction."}
+{"date": "20220814_093451", "team": "T01T", "where": "start_pred", "type": "Info", "msg": "successfully mounted GCS."}
+{"date": "20220815_093451", "team": "T01T", "where": "run_pred", "type": "Info", "msg": "Successfull found a script to run."}
+{"date": "20220815_093454", "team": "T01T", "where": "run_pred", "type": "Info", "msg": "successfully finished prediction."}
+{"date": "20220815_093757", "team": "T01T", "where": "run_pred", "type": "Error", "msg": "successfully mounted GCS."}
+{"date": "20220815_093758", "team": "T01T", "where": "run_pred", "type": "Error", "msg": "Successfull found a script to run."}
+{"date": "20220815_093802", "team": "T01T", "where": "run_pred", "type": "Error", "msg": "successfully finished prediction."}
+{"date": "20220815_093955", "team": "T01T", "where": "run_pred", "type": "Log", "msg": "successfully mounted GCS."}
+{"date": "20220816_093956", "team": "T01T", "where": "run_pred", "type": "Error", "msg": "Successfull found a script to run."}
+{"date": "20220816_093959", "team": "T01T", "where": "run_pred", "type": "Error", "msg": "successfully finished prediErrorn."}
