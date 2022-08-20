@@ -9,29 +9,65 @@
 <div class="collapse" id="form">
   <form action="/" method="POST">
     <p>
-      <input type="date" name="date_from">~
+      {% if prev_filter["date_from"] in [None, ''] %}
+      <input type="date" name="date_from">
+      {% else %}
+      <input type="date" name="date_from" value="{{ prev_filter["date_from"] }}">
+      {% endif %}
+      ~
+      {% if prev_filter["date_to"] in [None, ''] %}
       <input type="date" name="date_to">
+      {% else %}
+      <input type="date" name="date_to" value="{{ prev_filter["date_to"] }}">
+      {% endif %}
+      
       <select name="team">
+          {% if prev_filter["team"] in [None, ''] %}
           <option value="">チーム名</option>
+          {% else %}
+          <option value="{{ prev_filter["team"] }}">{{ prev_filter["team"] }}</option>
+          {% endif %}
           {% for team in uniq["team"] %}
+            {% if team != prev_filter["team"] %}
             <option value="{{ team }}">{{ team }}</option>
+            {% endif %}
           {% endfor %}
       </select>
+
       <select name="where">
-          <option value="">場所</option>
-          {% for where in uniq["where"] %}
-            <option value="{{ where }}">{{ where }}</option>
-          {% endfor %}
-      </select>
-      <select name="type">
-        <option value="">種類</option>
-        {% for msg_type in uniq["type"] %}
-        <option value="{{ msg_type }}">{{ msg_type }}</option>
+        {% if prev_filter["where"] in [None, ''] %}
+        <option value="">場所</option>
+        {% else %}
+        <option value="{{ prev_filter["where"] }}">{{ prev_filter["where"] }}</option>
+        {% endif %}
+        {% for where in uniq["where"] %}
+          {% if where != prev_filter["where"] %}
+          <option value="{{ where }}">{{ where }}</option>
+          {% endif %}
         {% endfor %}
       </select>
+
+      <select name="type">
+        {% if prev_filter["type"] in [None, ''] %}
+        <option value="">種類</option>
+        {% else %}
+        <option value="{{ prev_filter["type"] }}">{{ prev_filter["type"] }}</option>
+        {% endif %}
+        {% for msg_type in uniq["type"] %}
+          {% if msg_type != prev_filter["type"] %}
+          <option value="{{ msg_type }}">{{ msg_type }}</option>
+          {% endif %}
+        {% endfor %}
+      </select>
+      
       <select name="sort">
-        <option value="decending">日付降順</option>
+        {% if prev_filter["sort"] == 'ascending' %}
         <option value="ascending">日付昇順</option>
+        <option value="descending">日付降順</option>
+        {% else %}
+        <option value="descending">日付降順</option>
+        <option value="ascending">日付昇順</option>
+        {% endif %}
       </select>
       <input type="submit" class="btn btn-secondary" value="更新">
     </p>

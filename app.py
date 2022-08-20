@@ -70,7 +70,7 @@ def result():
     logs_list = sorted_df_logs.to_dict('records')
 
     # フィルタリングしたログとドロップダウンリストを渡してレンダリングする
-    return render_template('index.html', log=logs_list, uniq=unique_values)
+    return render_template('index.html', log=logs_list, uniq=unique_values, prev_filter=form_data_value)
 
 
 if __name__ == '__main__':
